@@ -20,3 +20,8 @@ metastore_db/
 
 # Processed data
 data/processed/
+
+# Virtual Environments
+spark_env/
+venv/
+.venv/
