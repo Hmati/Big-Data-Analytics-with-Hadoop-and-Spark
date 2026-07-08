@@ -1,3 +1,29 @@
+# Virtual Environments
+spark_env/
+venv/
+.venv/
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Jupyter
+.ipynb_checkpoints/
+
+# VS Code
+.vscode/
+
+# Spark
+spark-warehouse/
+metastore_db/
+
+# Logs
+*.log
+
+# Processed data
+data/processed/
+
+
 # Virtual Environment
 spark_env/
 
