@@ -2,6 +2,34 @@ from pyspark.sql import DataFrame
 from pyspark.sql.functions import col, sum
 
 
+
+
+def prepare_analysis_dataset(df: DataFrame) -> DataFrame:
+    """
+    Prepare the dataset for analysis by selecting the required
+    columns and removing records with missing values.
+
+    Parameters
+    ----------
+    df : DataFrame
+
+    Returns
+    -------
+    DataFrame
+    """
+
+    return (
+        df.select(
+            "item",
+            "element",
+            "year",
+            "unit",
+            "value"
+        )
+        .filter(col("value").isNotNull())
+    )
+
+
 def filter_by_element(df: DataFrame, element: str) -> DataFrame:
     """
     Filter the dataset by a specific element.
